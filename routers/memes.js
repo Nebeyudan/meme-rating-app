@@ -1,13 +1,7 @@
-// routers/memes.js
 const express = require('express');
 const router  = express.Router();
 
 const API_KEY = process.env.API_KEY;
-
-/**
- * GET /
- * Home page: two buttons to View Memes or View Reviews
- */
 router.get('/', (_req, res) => {
   res.send(`
     <!DOCTYPE html>
@@ -43,16 +37,11 @@ router.get('/', (_req, res) => {
     </html>
   `);
 });
-
-/**
- * GET /memes
- * Fetch & display a grid of random memes
- */
 router.get('/memes', async (_req, res) => {
   try {
     const apiUrl = `https://api.apileague.com/search-memes` +
                    `?api-key=${API_KEY}` +
-                   `&number=35` +
+                   `&number=25` +
                    `&media-type=image`;
     const response = await fetch(apiUrl);
     const { memes = [] } = await response.json();
@@ -89,11 +78,6 @@ router.get('/memes', async (_req, res) => {
     res.status(500).send('Error fetching memes');
   }
 });
-
-/**
- * GET /meme
- * Single meme + review form
- */
 router.get('/meme', (req, res) => {
   const memeUrl = req.query.url;
   if (!memeUrl) return res.redirect('/');

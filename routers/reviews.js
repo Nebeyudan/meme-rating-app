@@ -1,8 +1,5 @@
-// routers/reviews.js
 const express = require('express');
 const router  = express.Router();
-
-// POST /reviews — save a new review
 router.post('/', async (req, res) => {
   const { memeUrl, review } = req.body;
   await req.reviewsColl.insertOne({
@@ -12,14 +9,10 @@ router.post('/', async (req, res) => {
   });
   res.redirect('/reviews');
 });
-
-// POST /reviews/deleteAll — delete every review
 router.post('/deleteAll', async (req, res) => {
   await req.reviewsColl.deleteMany({});
   res.redirect('/reviews');
 });
-
-// GET /reviews — list all reviews, plus “Delete All” button
 router.get('/', async (req, res) => {
   const all = await req.reviewsColl.find().toArray();
   const grouped = all.reduce((acc, r) => {

@@ -3,20 +3,20 @@
 ---
 
 **Submitted by:**  
-Nebeyu Daniel (directory id: nebeyudan)
+Nebeyu Daniel (directory id: ndaniel3)
 
 **Group Members:**  
-- Nebeyu Daniel (nebeyudan)
+- Nebeyu Daniel
 
 ---
 
 ## App Description  
-A simple Express/MongoDB application that fetches random memes from the API League, lets users submit text reviews for each meme, and view or delete all reviews.
+A cool meme review site where you can view memes and give your honest thoughts and view how others view that meme.
 
 ---
 
 ## YouTube Video Demo Link  
-https://youtu.be/your-demo-video-link
+https://youtu.be/R5cLHJ8ZGfg
 
 ---
 
@@ -26,11 +26,11 @@ https://youtu.be/your-demo-video-link
 ---
 
 ## Contact Email  
-nebeyudan@umd.edu
+nebeyudan@gmail.com
 
 ---
 
 ## Deployed App Link  
-https://your-app.onrender.com
+https://meme-rating-app.onrender.com/
 
 ---
